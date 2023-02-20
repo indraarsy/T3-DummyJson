@@ -25,6 +25,7 @@ import { useRouter } from "next/router";
 import type { ReactNode, ReactText } from "react";
 import React from "react";
 import type { IconType } from "react-icons";
+import { AiFillGithub } from "react-icons/ai";
 import { FiHome, FiMenu, FiShoppingCart } from "react-icons/fi";
 
 interface LinkItemProps {
@@ -193,6 +194,16 @@ const MobileNav = ({ onOpen, ...rest }: MobileProps) => {
       <HStack spacing={{ base: "0", md: "6" }}>
         <Flex alignItems={"center"}>
           <Menu>
+            <AiFillGithub
+              fontSize={35}
+              style={{ marginRight: "20px" }}
+              onClick={() => {
+                window.open(
+                  "https://github.com/indraarsy/T3-DummyJson",
+                  "_blank"
+                );
+              }}
+            />
             <MenuButton
               py={2}
               transition="all 0.3s"

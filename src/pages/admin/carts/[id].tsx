@@ -23,7 +23,6 @@ import { api } from "../../../utils/api";
 
 const CartsPage: React.FunctionComponent = (props) => {
   const router = useRouter();
-  const [total, setTotal] = React.useState(0);
   const { data, isFetching, isFetched } =
     api.carts.getSingleCart.useQuery<TDetailProduct>({
       id: Number(router.query.id),
